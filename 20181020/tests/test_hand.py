@@ -23,41 +23,48 @@ def test_invalid_hand(hand):
         Hand(hand)
 
 
+@pytest.mark.skip
 @pytest.mark.parametrize('hand, expected', get_ranks('High Card'))
 def test_rank_high_card(hand, expected):
     assert Hand(hand).rank() == expected
 
 
+@pytest.mark.skip
 @pytest.mark.parametrize('hand, expected', get_ranks('Pair'))
 def test_rank_pair(hand, expected):
     assert Hand(hand).rank() == expected
 
 
+@pytest.mark.skip
 @pytest.mark.parametrize('hand, expected', get_ranks('Two Pairs'))
 def test_rank_two_pairs(hand, expected):
     assert Hand(hand).rank() == expected
 
 
+@pytest.mark.skip
 @pytest.mark.parametrize('hand, expected', get_ranks('Three of a Kind'))
 def test_rank_three_of_a_kind(hand, expected):
     assert Hand(hand).rank() == expected
 
 
+@pytest.mark.skip
 @pytest.mark.parametrize('hand, expected', get_ranks('Straight'))
 def test_rank_staight(hand, expected):
     assert Hand(hand).rank() == expected
 
 
+@pytest.mark.skip
 @pytest.mark.parametrize('hand, expected', get_ranks('Flush'))
 def test_rank_flush(hand, expected):
     assert Hand(hand).rank() == expected
 
 
+@pytest.mark.skip
 @pytest.mark.parametrize('hand, expected', get_ranks('Four of a Kind'))
 def test_rank_four_of_a_kind(hand, expected):
     assert Hand(hand).rank() == expected
 
-
+@pytest.mark.skip
 @pytest.mark.parametrize('hand, expected', get_ranks('Straight Flush'))
 def test_rank_straight_flush(hand, expected):
     assert Hand(hand).rank() == expected
